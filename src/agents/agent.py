@@ -92,7 +92,7 @@ def create_red_agent_default():
         return agent, runner
 
     raise RuntimeError(
-        "RED_TEAM_PROVIDER phải là openai hoặc gemini. Xem .env.example."
+        "RED_TEAM_PROVIDER phải là openai, gemini hoặc groq. Xem .env.example."
     )
 
 

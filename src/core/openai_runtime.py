@@ -2,7 +2,7 @@
 OpenAI SDK runtime — dùng cho:
 
   Blue Team → OpenRouter liquid/lfm-2.5-2.6b (create_blue_pair)
-  Red Team  → OpenAI gpt-4o-mini (create_openai_pair) khi RED_TEAM_PROVIDER=openai
+  Red Team  → OpenAI-compatible runtime for OpenAI or Groq
 
 Gemini Red Team dùng Google ADK trong agents/*.py — không đi qua file này.
 """
@@ -217,7 +217,7 @@ def create_openai_pair(
     temperature: float = 0.4,
     model: str | None = None,
 ) -> tuple[OpenAIAgent, OpenAIRunner]:
-    """Red Team OpenAI path (default = soft model; advance may pass harder)."""
+    """Red Team OpenAI-compatible path (OpenAI or Groq)."""
     return _make_pair(
         name=name,
         instruction=instruction,

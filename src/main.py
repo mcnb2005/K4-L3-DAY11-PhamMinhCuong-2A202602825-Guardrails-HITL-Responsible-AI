@@ -19,6 +19,13 @@ import asyncio
 import sys
 from pathlib import Path
 
+# Windows may inherit a legacy console encoding (for example cp1252), while
+# the lab messages contain Vietnamese text and Unicode arrows.  Configure the
+# streams once so the CLI behaves consistently in terminals and CI captures.
+for _stream in (sys.stdout, sys.stderr):
+    if hasattr(_stream, "reconfigure"):
+        _stream.reconfigure(encoding="utf-8", errors="replace")
+
 # Cho phép chạy ``python src/main.py`` từ gốc repo
 _SRC_DIR = Path(__file__).resolve().parent
 if str(_SRC_DIR) not in sys.path:

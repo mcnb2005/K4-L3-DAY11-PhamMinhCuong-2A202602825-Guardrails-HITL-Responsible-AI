@@ -1,5 +1,16 @@
 # Day 11 — Controlled Agent Security (2026)
 
+## Thông tin bài nộp
+
+- **Họ và tên:** Phạm Minh Cương
+- **MSSV:** 2A202602825
+- **Repo:** `K4-L3-DAY11-PhamMinhCuong-2A202602825-Guardrails-HITL-Responsible-AI`
+- **Kiểm tra local:** 16 tests passed; schema và packaging hợp lệ
+
+> Lưu ý: CP4 trong lần chạy local sử dụng Groq qua OpenAI-compatible API.
+> Provider/model này giúp tạo artifact thử nghiệm nhưng không thuộc provider/model
+> mặc định của rubric; grader chính thức có thể yêu cầu replay bằng OpenAI hoặc Gemini.
+
 > 👤 **Hình thức:** bài tập **cá nhân** (1 người / 1 MSSV).  
 > 🎯 **Mục tiêu:** xây **Blue** (phòng thủ), rồi red-team **Red** + **Red Advance**.  
 > ✅ Làm theo **Checkpoint 1 → 5** trong [`CHECKPOINTS.md`](CHECKPOINTS.md) · nộp theo [`SUBMISSION.md`](SUBMISSION.md).
